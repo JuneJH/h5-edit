@@ -3,7 +3,7 @@
         <EditWrapper v-for="comp in components" @click="editHander(comp)"
             :props="comp"
             :class="{ 'active': state.currentElement?.id === comp.id }">
-            <component :is="comp.name" v-bind="comp"></component>
+            <component class="edit-item" :is="comp.name" v-bind="comp"></component>
         </EditWrapper>
     </div>
 </template>
@@ -24,6 +24,10 @@ function editHander(item: CompProps) {
         setCurrentCompId(item.id)
     }
 }
+function del(obj:any){
+    const {left,right,...reset} = obj;
+    return reset;
+}
 
 </script>
 
@@ -33,9 +37,12 @@ function editHander(item: CompProps) {
     width: 400px;
     height: 600px;
     background-color: #fff;
-    position: relative;
+    position:fixed
 }
 .active {
     border: 1px solid orange;
+}
+.edit-item{
+    position: static !important;
 }
 </style>

@@ -9,7 +9,6 @@ declare module 'vue' {
   export interface GlobalComponents {
     EditWrapper: typeof import('./src/components/EditWrapper.vue')['default']
     Form: typeof import('./src/components/form/index.vue')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     JText: typeof import('./src/components/J-Text.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
