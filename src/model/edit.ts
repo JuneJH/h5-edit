@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { computed, ref } from 'vue';
 import { data } from './mockData';
-import { EditPageProps, H5PageProps, CompProps } from './defineEditProps';
+import { EditPageProps, CompProps } from './defineEditProps';
 import { v4 as uuid } from 'uuid';
 
 

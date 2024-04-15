@@ -15,7 +15,9 @@ const setComp = (fontSize:string) => {
         name:"j-text",
         fontSize,
         text:"大号字体",
-        fontFamily:'"KaiTi","STKaiti"'
+        fontFamily:'"KaiTi","STKaiti"',
+        left:20,
+        top:30,
     })
 }
 

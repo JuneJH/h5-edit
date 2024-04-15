@@ -20,6 +20,6 @@ const styleProps = usePickStyle(props);
 
 <style scoped>
 .j-text-container{
-    position: relative !important;
+    /* position: relative !important; */
 }
 </style>
