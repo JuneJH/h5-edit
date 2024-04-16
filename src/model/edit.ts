@@ -35,8 +35,9 @@ const useEdit = defineStore("edit", () => {
         return target;
     });
 
-    function setProps(key:any,val:any){
-        const target:any = state.value.components?.find(item => item.id === state.value.currentElement);
+    function setProps(id:string,key:any,val:any){
+        console.log("id",id,key,val)
+        const target:any = state.value.components?.find(item => item.id === id);
         if(target){
             target[key] = val;
         }
