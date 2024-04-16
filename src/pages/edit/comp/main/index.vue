@@ -1,7 +1,6 @@
 <template>
-    <div class="container">
-        <EditWrapper v-for="comp in components" @click="editHander(comp)"
-            :props="comp"
+    <div class="container" id="edit-container">
+        <EditWrapper ref="editRef" v-for="comp in components" @click="editHander(comp)" :props="comp"
             :class="{ 'active': state.currentElement?.id === comp.id }">
             <component class="edit-item" :is="comp.name" v-bind="comp"></component>
         </EditWrapper>
@@ -9,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed} from 'vue'
 import { useEdit } from '../../../../model/index';
 import { CompProps } from '../../../../model/defineEditProps';
 import EditWrapper from '../../../../components/EditWrapper.vue';
@@ -24,10 +23,11 @@ function editHander(item: CompProps) {
         setCurrentCompId(item.id)
     }
 }
-function del(obj:any){
-    const {left,right,...reset} = obj;
+function del(obj: any) {
+    const { left, right, ...reset } = obj;
     return reset;
 }
+
 
 </script>
 
@@ -37,12 +37,14 @@ function del(obj:any){
     width: 400px;
     height: 600px;
     background-color: #fff;
-    position:fixed
+    position: fixed
 }
+
 .active {
     border: 1px solid orange;
 }
-.edit-item{
+
+.edit-item {
     position: static !important;
 }
 </style>

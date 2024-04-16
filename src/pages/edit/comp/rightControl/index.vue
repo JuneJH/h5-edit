@@ -8,6 +8,7 @@ import { useEdit } from '../../../../model';
 import Form from '../../../../components/form/index.vue';
 
 const state = useEdit();
+console.log("stat",state)
 
 
 function onChange(val: any) {

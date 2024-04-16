@@ -61,6 +61,14 @@ const formTypesMaps: FormTypes = {
         ...numberToPxHandr,
         label:"字号"
     },
+    left: {
+        ...numberToPxHandr,
+        label:"left"
+    },
+    top:{
+        ...numberToPxHandr,
+        label:"top"
+    },
     href:{
         ...defaultMap,
         afterTransform:(e:any)=>e.target.value

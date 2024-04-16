@@ -16,8 +16,8 @@ const setComp = (fontSize:string) => {
         fontSize,
         text:"大号字体",
         fontFamily:'"KaiTi","STKaiti"',
-        left:20,
-        top:30,
+        left:'20px',
+        top:'30px',
     })
 }
 
