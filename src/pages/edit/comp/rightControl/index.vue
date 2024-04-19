@@ -11,7 +11,7 @@ const state = useEdit();
 
 
 function onChange(val: any) {
-    state.setProps(val.key, val.value)
+    state.setProps(state.currentElement.id ,val.key, val.value)
 }
 
 

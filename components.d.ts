@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    DynamicForm: typeof import('./src/components/DynamicForm.vue')['default']
     EditWrapper: typeof import('./src/components/EditWrapper.vue')['default']
     Form: typeof import('./src/components/form/index.vue')['default']
     JText: typeof import('./src/components/J-Text.vue')['default']
