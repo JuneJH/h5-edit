@@ -46,5 +46,7 @@ function del(obj: any) {
 
 .edit-item {
     position: static !important;
+    height: 100% !important;
+    width: 100% !important;
 }
 </style>
