@@ -1,7 +1,6 @@
 <template>
     <div class="container" id="edit-container">
-        <EditWrapper ref="editRef" v-for="comp in components" @click="editHander(comp)" :props="comp"
-            :class="{ 'active': state.currentElement?.id === comp.id }">
+        <EditWrapper ref="editRef" v-for="comp in components" @click="editHander(comp)" :props="comp">
             <component class="edit-item" :is="comp.name" v-bind="comp"></component>
         </EditWrapper>
     </div>
